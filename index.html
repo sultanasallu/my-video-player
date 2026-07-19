@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎬 আমার ভিডিও প্লেয়ার</title>
+
+<style>
+
+body{
+background:#111;
+margin:0;
+font-family:Arial,sans-serif;
+color:white;
+}
+
+header{
+background:#ff0000;
+padding:15px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+video{
+width:100%;
+border-radius:15px;
+background:black;
+}
+
+.card{
+background:#222;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(255,255,255,.2);
+}
+
+button{
+padding:12px 20px;
+margin:5px;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.play{
+background:#00c853;
+color:white;
+}
+
+.pause{
+background:#ff1744;
+color:white;
+}
+
+.full{
+background:#2979ff;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+🎬 আমার ভিডিও প্লেয়ার
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<video id="myVideo" controls>
+
+<source src="Video.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<button class="play" onclick="playVideo()">▶ Play</button>
+
+<button class="pause" onclick="pauseVideo()">⏸ Pause</button>
+
+<button class="full" onclick="fullScreen()">⛶ Full Screen</button>
+
+</div>
+
+</div>
+
+<script>
+
+var video=document.getElementById("myVideo");
+
+function playVideo(){
+video.play();
+}
+
+function pauseVideo(){
+video.pause();
+}
+
+function fullScreen(){
+
+if(video.requestFullscreen){
+video.requestFullscreen();
+}
+
+}
+
+</script>
+
+</body>
+</html>
